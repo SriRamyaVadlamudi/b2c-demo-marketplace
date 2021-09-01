@@ -88,14 +88,14 @@ groups:
             yves:
                 application: yves
                 endpoints:
-                    date-time-configurator-example.mp-b2c-internal.demo-spryker.com:
+                    date-time-configurator-example.b2c-marketplace.demo-spryker.com:
                         entry-point: Configurator
-                    www.de.mp-b2c-internal.demo-spryker.com:
+                    www.de.b2c-marketplace.demo-spryker.com:
                         store: DE
                         services:
                             session:
                                 namespace: 1
-                    www.at.mp-b2c-internal.demo-spryker.com:
+                    www.at.b2c-marketplace.demo-spryker.com:
                         store: AT
                         services:
                             session:
@@ -103,20 +103,20 @@ groups:
             glue:
                 application: glue
                 endpoints:
-                    glue.de.mp-b2c-internal.demo-spryker.com:
+                    glue.de.b2c-marketplace.demo-spryker.com:
                         store: DE
-                    glue.at.mp-b2c-internal.demo-spryker.com:
+                    glue.at.b2c-marketplace.demo-spryker.com:
                         store: AT
             boffice:
                 application: backoffice
                 endpoints:
-                    backoffice.de.mp-b2c-internal.demo-spryker.com:
+                    backoffice.de.b2c-marketplace.demo-spryker.com:
                         store: DE
                         primal: true
                         services:
                             session:
                                 namespace: 3
-                    backoffice.at.mp-b2c-internal.demo-spryker.com:
+                    backoffice.at.b2c-marketplace.demo-spryker.com:
                         store: AT
                         services:
                             session:
@@ -124,32 +124,32 @@ groups:
             backgw:
                 application: backend-gateway
                 endpoints:
-                    backend-gateway.de.mp-b2c-internal.demo-spryker.com:
+                    backend-gateway.de.b2c-marketplace.demo-spryker.com:
                         store: DE
                         primal: true
-                    backend-gateway.at.mp-b2c-internal.demo-spryker.com:
+                    backend-gateway.at.b2c-marketplace.demo-spryker.com:
                         store: AT
                         primal: true
             backapi:
                 application: zed
                 endpoints:
-                    backend-api.de.mp-b2c-internal.demo-spryker.com:
+                    backend-api.de.b2c-marketplace.demo-spryker.com:
                         store: DE
                         entry-point: BackendApi
-                    backend-api.at.mp-b2c-internal.demo-spryker.com:
+                    backend-api.at.b2c-marketplace.demo-spryker.com:
                         store: AT
                         entry-point: BackendApi
             mportal:
                 application: merchant-portal
                 endpoints:
-                    mp.de.mp-b2c-internal.demo-spryker.com:
+                    mp.de.b2c-marketplace.demo-spryker.com:
                         entry-point: MerchantPortal
                         store: DE
                         primal: true
                         services:
                             session:
                                 namespace: 7
-                    mp.at.mp-b2c-internal.demo-spryker.com:
+                    mp.at.b2c-marketplace.demo-spryker.com:
                         entry-point: MerchantPortal
                         store: AT
                         services:
@@ -171,7 +171,7 @@ services:
             username: "spryker"
             password: "secret"
         endpoints:
-            queue.mp-b2c-internal.demo-spryker.com:
+            queue.b2c-marketplace.demo-spryker.com:
             localhost:5672:
                 protocol: tcp
     session:
@@ -190,11 +190,11 @@ services:
     scheduler:
         engine: jenkins
         endpoints:
-            scheduler.mp-b2c-internal.demo-spryker.com:
+            scheduler.b2c-marketplace.demo-spryker.com:
     mail_catcher:
         engine: mailhog
         endpoints:
-            mail.mp-b2c-internal.demo-spryker.com:
+            mail.b2c-marketplace.demo-spryker.com:
 
 docker:
 
