@@ -54,7 +54,7 @@ regions:
     EU:
         services:
             database:
-                database: spryker_mp_t
+                database: spryker_mpt
                 username: spryker
                 password: secret
 
