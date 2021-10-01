@@ -54,7 +54,7 @@ regions:
     EU:
         services:
             database:
-                database: spryker_b2cmarketplace
+                database: spryker_b2cmarketplace2
                 username: spryker
                 password: secret
 
