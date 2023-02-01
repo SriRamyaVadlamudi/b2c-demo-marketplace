@@ -24,7 +24,7 @@ use Spryker\Zed\ProductApproval\Communication\Plugin\Product\ProductApprovalProd
 use Spryker\Zed\ProductBundle\Communication\Plugin\Product\ProductBundleDeactivatorProductConcreteAfterUpdatePlugin;
 use Spryker\Zed\ProductBundle\Communication\Plugin\Product\ProductBundleProductConcreteAfterCreatePlugin;
 use Spryker\Zed\ProductBundle\Communication\Plugin\Product\ProductBundleProductConcreteAfterUpdatePlugin;
-use Spryker\Zed\ProductBundle\Communication\Plugin\Product\ProductBundleProductConcreteReadPlugin;
+use Spryker\Zed\ProductBundle\Communication\Plugin\Product\ProductBundleProductConcreteExpanderPlugin;
 use Spryker\Zed\ProductCategory\Communication\Plugin\Product\ProductConcreteCategoriesExpanderPlugin;
 use Spryker\Zed\ProductDiscontinued\Communication\Plugin\SaveDiscontinuedNotesProductConcretePluginUpdate;
 use Spryker\Zed\ProductDiscontinuedProductBundleConnector\Communication\Plugin\Product\DiscontinuedProductConcreteAfterCreatePlugin;
@@ -37,15 +37,15 @@ use Spryker\Zed\ProductImage\Communication\Plugin\ProductConcreteAfterCreatePlug
 use Spryker\Zed\ProductImage\Communication\Plugin\ProductConcreteAfterUpdatePlugin as ImageSetProductConcreteAfterUpdatePlugin;
 use Spryker\Zed\ProductImage\Communication\Plugin\ProductConcreteReadPlugin as ImageSetProductConcreteReadPlugin;
 use Spryker\Zed\ProductReview\Communication\Plugin\Product\ProductReviewProductConcreteExpanderPlugin;
+use Spryker\Zed\ProductSearch\Communication\Plugin\Product\ProductSearchProductConcreteExpanderPlugin;
 use Spryker\Zed\ProductSearch\Communication\Plugin\ProductConcrete\ProductSearchProductConcreteAfterCreatePlugin;
 use Spryker\Zed\ProductSearch\Communication\Plugin\ProductConcrete\ProductSearchProductConcreteAfterUpdatePlugin;
-use Spryker\Zed\ProductSearch\Communication\Plugin\ProductConcrete\ProductSearchProductConcreteReadPlugin;
+use Spryker\Zed\ProductValidity\Communication\Plugin\Product\ProductValidityProductConcreteExpanderPlugin;
 use Spryker\Zed\ProductValidity\Communication\Plugin\ProductValidityCreatePlugin;
-use Spryker\Zed\ProductValidity\Communication\Plugin\ProductValidityReadPlugin;
 use Spryker\Zed\ProductValidity\Communication\Plugin\ProductValidityUpdatePlugin;
+use Spryker\Zed\Stock\Communication\Plugin\Product\StockProductConcreteExpanderPlugin;
 use Spryker\Zed\Stock\Communication\Plugin\ProductConcreteAfterCreatePlugin as StockProductConcreteAfterCreatePlugin;
 use Spryker\Zed\Stock\Communication\Plugin\ProductConcreteAfterUpdatePlugin as StockProductConcreteAfterUpdatePlugin;
-use Spryker\Zed\Stock\Communication\Plugin\ProductConcreteReadPlugin as StockProductConcreteReadPlugin;
 use Spryker\Zed\TaxProductConnector\Communication\Plugin\Product\TaxSetProductAbstractExpanderPlugin;
 use Spryker\Zed\TaxProductConnector\Communication\Plugin\Product\TaxSetProductAbstractPostCreatePlugin;
 use Spryker\Zed\TaxProductConnector\Communication\Plugin\TaxSetProductAbstractAfterUpdatePlugin;
@@ -142,11 +142,7 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
     {
         return [
             new ImageSetProductConcreteReadPlugin(),
-            new StockProductConcreteReadPlugin(),
             new ConcreteProductPriceProductConcreteReadPlugin(),
-            new ProductSearchProductConcreteReadPlugin(),
-            new ProductBundleProductConcreteReadPlugin(),
-            new ProductValidityReadPlugin(),
         ];
     }
 
@@ -204,6 +200,10 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
             new ProductReviewProductConcreteExpanderPlugin(),
             new MerchantProductOfferProductConcreteExpanderPlugin(),
             new ProductConcreteCategoriesExpanderPlugin(),
+            new ProductBundleProductConcreteExpanderPlugin(),
+            new ProductSearchProductConcreteExpanderPlugin(),
+            new ProductValidityProductConcreteExpanderPlugin(),
+            new StockProductConcreteExpanderPlugin(),
         ];
     }
 
