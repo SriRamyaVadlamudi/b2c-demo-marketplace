@@ -16,15 +16,16 @@ use Spryker\Zed\DiscountPromotion\Communication\Plugin\Discount\DiscountPromotio
 use Spryker\Zed\DiscountPromotion\Communication\Plugin\Discount\DiscountPromotionCleanerPostUpdatePlugin;
 use Spryker\Zed\DiscountPromotion\Communication\Plugin\Discount\DiscountPromotionCollectorStrategyPlugin;
 use Spryker\Zed\DiscountPromotion\Communication\Plugin\Discount\DiscountPromotionConfigurationExpanderPlugin;
+use Spryker\Zed\DiscountPromotion\Communication\Plugin\Discount\DiscountPromotionDiscountPostUpdatePlugin;
 use Spryker\Zed\DiscountPromotion\Communication\Plugin\Discount\DiscountPromotionFilterApplicableItemsPlugin;
 use Spryker\Zed\DiscountPromotion\Communication\Plugin\Discount\DiscountPromotionFilterCollectedItemsPlugin;
 use Spryker\Zed\DiscountPromotion\Communication\Plugin\Discount\DiscountPromotionPostCreatePlugin;
-use Spryker\Zed\DiscountPromotion\Communication\Plugin\Discount\DiscountPromotionPostUpdatePlugin;
 use Spryker\Zed\DiscountPromotion\Communication\Plugin\Discount\DiscountPromotionViewBlockProviderPlugin;
 use Spryker\Zed\DiscountPromotion\Communication\Plugin\Discount\PromotionCollectedDiscountGroupingStrategyPlugin;
 use Spryker\Zed\GiftCard\Communication\Plugin\GiftCardDiscountableItemFilterPlugin;
 use Spryker\Zed\Kernel\Communication\Form\FormTypeInterface;
 use Spryker\Zed\Money\Communication\Plugin\Form\MoneyCollectionFormTypePlugin;
+use Spryker\Zed\MoneyGui\Communication\Plugin\Form\MoneyCollectionFormTypePlugin;
 use Spryker\Zed\ProductDiscountConnector\Communication\Plugin\Collector\ProductAttributeCollectorPlugin;
 use Spryker\Zed\ProductDiscountConnector\Communication\Plugin\DecisionRule\ProductAttributeDecisionRulePlugin;
 use Spryker\Zed\ProductLabelDiscountConnector\Communication\Plugin\Collector\ProductLabelCollectorPlugin;
@@ -128,8 +129,8 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
     protected function getDiscountPostUpdatePlugins(): array
     {
         return [
-            new DiscountPromotionPostUpdatePlugin(),
             new DiscountPromotionCleanerPostUpdatePlugin(),
+            new DiscountPromotionDiscountPostUpdatePlugin(),
         ];
     }
 

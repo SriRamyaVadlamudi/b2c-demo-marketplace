@@ -13,6 +13,7 @@ use Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist\Valid
 use Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist\ValidMerchantProductOfferUpdateItemPreCheckPlugin;
 use Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist\WishlistProductOfferPreAddItemPlugin;
 use Spryker\Zed\MerchantProductWishlist\Communication\Plugin\Wishlist\WishlistMerchantProductPreAddItemPlugin;
+use Spryker\Zed\MerchantProductWishlist\Communication\Plugin\Wishlist\WishlistMerchantProductPreUpdateItemPlugin;
 use Spryker\Zed\PriceProduct\Communication\Plugin\Wishlist\PriceProductWishlistItemExpanderPlugin;
 use Spryker\Zed\PriceProductOffer\Communication\Plugin\Wishlist\PriceProductOfferWishlistItemExpanderPlugin;
 use Spryker\Zed\ProductConfigurationWishlist\Communication\Plugin\Wishlist\ProductConfigurationItemExpanderPlugin;
@@ -93,7 +94,7 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
     protected function getWishlistPreUpdateItemPlugins(): array
     {
         return [
-            new ProductConfigurationWishlistPreUpdateItemPlugin(),
+            new ProductConfigurationWishlistPreUpdateItemPlugin(), new WishlistMerchantProductPreUpdateItemPlugin(),
         ];
     }
 

@@ -18,7 +18,7 @@ class ProductConfigurationConfig extends SprykerProductConfigurationConfig
     public function getConfigurationFieldsNotAllowedForEncoding(): array
     {
         return [
-            ProductConfigurationInstanceTransfer::QUANTITY,
+            ProductConfigurationInstanceTransfer::QUANTITY, ProductConfigurationInstanceTransfer::QUANTITY,
         ];
     }
 }
