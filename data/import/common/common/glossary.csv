@@ -3072,3 +3072,7 @@ wishlist.validation.error.wishlist_item_not_found,Wishlist item not found.,en_US
 wishlist.validation.error.wishlist_item_not_found,Wunschliste Artikel nicht gefunden.,de_DE
 wishlist.validation.error.wishlist_item_cannot_be_updated,Wishlist item cannot be updated.,en_US
 wishlist.validation.error.wishlist_item_cannot_be_updated,Wunschliste kann nicht aktualisiert werden.,de_DE
+merchant_product_offer_widget.merchant_name,Merchant,en_US
+merchant_product_offer_widget.merchant_name,Händler,de_DE
+product_configurator_gateway_page.shopping_list_item_uuid_required,Shopping List item ID is required parameter.,en_US
+product_configurator_gateway_page.shopping_list_item_uuid_required,Die Artikel-ID der Einkaufsliste ist ein erforderlicher Parameter.,de_DE

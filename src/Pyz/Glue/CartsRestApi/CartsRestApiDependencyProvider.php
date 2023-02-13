@@ -10,6 +10,8 @@ namespace Pyz\Glue\CartsRestApi;
 use Spryker\Glue\CartsRestApi\CartsRestApiDependencyProvider as SprykerCartsRestApiDependencyProvider;
 use Spryker\Glue\ConfigurableBundleCartsRestApi\Plugin\CartsRestApi\ConfiguredBundleItemsAttributesMapperPlugin;
 use Spryker\Glue\DiscountPromotionsRestApi\Plugin\CartsRestApi\DiscountPromotionCartItemExpanderPlugin;
+use Spryker\Glue\MerchantProductOffersRestApi\Plugin\CartsRestApi\MerchantProductOfferCartItemExpanderPlugin;
+use Spryker\Glue\MerchantProductOffersRestApi\Plugin\CartsRestApi\MerchantProductOfferRestCartItemsAttributesMapperPlugin;
 use Spryker\Glue\MerchantProductsRestApi\Plugin\CartsRestApi\MerchantProductCartItemExpanderPlugin;
 use Spryker\Glue\ProductBundleCartsRestApi\Plugin\CartsRestApi\ProductBundleCartItemFilterPlugin;
 use Spryker\Glue\ProductConfigurationsRestApi\Plugin\CartsRestApi\ProductConfigurationCartItemExpanderPlugin;
@@ -29,6 +31,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
             new ProductOptionRestCartItemsAttributesMapperPlugin(),
             new ConfiguredBundleItemsAttributesMapperPlugin(),
             new ProductConfigurationRestCartItemsAttributesMapperPlugin(),
+            new MerchantProductOfferRestCartItemsAttributesMapperPlugin(),
         ];
     }
 
@@ -42,6 +45,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
             new DiscountPromotionCartItemExpanderPlugin(),
             new MerchantProductCartItemExpanderPlugin(),
             new ProductConfigurationCartItemExpanderPlugin(),
+            new MerchantProductOfferCartItemExpanderPlugin(),
         ];
     }
 

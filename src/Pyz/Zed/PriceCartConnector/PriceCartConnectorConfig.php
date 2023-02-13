@@ -12,6 +12,7 @@ use Spryker\Zed\PriceCartConnector\PriceCartConnectorConfig as SprykerPriceCartC
 
 class PriceCartConnectorConfig extends SprykerPriceCartConnectorConfig
 {
+    public const IS_ZERO_PRICE_ENABLED = false;
     /**
      * @var bool
      */
